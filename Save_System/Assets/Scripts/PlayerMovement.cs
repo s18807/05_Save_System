@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Text text;
     public float moveSpeed, jumpSpeed;
-    private bool grounded = false;
+    [SerializeField]private bool grounded = false;
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer sr;
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SaveData.instance.health= 3;
+        SaveData.instance.health=3;
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
@@ -31,15 +31,12 @@ public class PlayerMovement : MonoBehaviour
         }
         float xDisplacement = Input.GetAxis("Horizontal");
         if (xDisplacement < 0)
-            sr.flipX = true;
-        if (xDisplacement > 0)
             sr.flipX = false;
+        if (xDisplacement > 0)
+            sr.flipX = true;
         animator.SetFloat("xSpeed", Mathf.Abs(xDisplacement));
         rb.velocity = new Vector2(xDisplacement * moveSpeed, rb.velocity.y);
-        if (Input.GetKeyDown("m"))
-            animator.SetBool("invisible", true);
-        if (Input.GetKeyDown("n"))
-            animator.SetBool("invisible", false);
+        
         if (Input.GetButtonDown("Fire1")&& SaveData.instance.potions>0) {
             SaveData.instance.potions--;
             SaveData.instance.health++;

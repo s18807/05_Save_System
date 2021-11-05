@@ -9,7 +9,9 @@ public class SaveData
 
     public int gold, potions,health;
     public Vector3 playerPosition;
-
+    public Vector3[] Coins;
+    public Vector3[] Potions;
+    public Vector3[] Enemies;
     public static SaveData instance
     {
         get {

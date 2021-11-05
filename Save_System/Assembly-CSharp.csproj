@@ -53,18 +53,20 @@
     <UnityVersion>2020.3.21f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\PotionDispenser.cs" />
-    <Compile Include="Assets\Scripts\Serializer.cs" />
-    <Compile Include="Assets\Scripts\GoldDispenser.cs" />
     <Compile Include="Assets\Scripts\SaveManager.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Coin.cs" />
     <Compile Include="Assets\Scripts\SaveData.cs" />
-    <Compile Include="Assets\Scripts\Vector3SerializationSurrogate.cs" />
     <Compile Include="Assets\Scripts\ChaserBehavior.cs" />
+    <Compile Include="Assets\Scripts\Serializer.cs" />
     <Compile Include="Assets\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Potion.cs" />
+    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Vector3SerializationSurrogate.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Sprites\kenny\Construct 3\Readme.txt" />
     <None Include="Assets\Free Platform Game Assets\Readme.txt" />
+    <None Include="Assets\Sprites\kenny\License.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class Serializer
 {
-    private static string path = Application.persistentDataPath + "SavedData.sav";
+    private static string path = Application.persistentDataPath + "save1.sav";
 
     public static void Save()
     {

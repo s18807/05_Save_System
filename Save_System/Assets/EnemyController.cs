@@ -10,6 +10,11 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private Text text; 
     private Vector3 startPos;
 
+    public Vector3 StartPos { get => startPos; set => startPos = value; }
+    public float Speed { get => speed; set => speed = value; }
+    public float MoveRange { get => moveRange; set => moveRange = value; }
+    public Text Text { get => text; set => text = value; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +32,7 @@ public class EnemyController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
             SaveData.instance.health--;
-        text.text = "Gold: " + SaveData.instance.gold + ", Potions: " + SaveData.instance.potions + ", Health: " + SaveData.instance.health; 
+        text.text = "Gold: " + SaveData.instance.gold + ", Potions: " + SaveData.instance.potions + ", Health: " + SaveData.instance.health;
+        Destroy(gameObject);
     }
 }
